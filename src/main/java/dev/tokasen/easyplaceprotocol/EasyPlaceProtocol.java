@@ -109,7 +109,7 @@ public class EasyPlaceProtocol extends JavaPlugin implements Listener {
             StreamSerializer.getDefault().serializeVarInt(outputStream, 69);
             StreamSerializer.getDefault().serializeString(outputStream, "SPIGOT-ABP");
             CustomPacketPayload payload = makePayload(key, rawData.toByteArray());
-            sendClientBoundCustomPayloadPacket(event.getPlayer(), payload);
+            // sendClientBoundCustomPayloadPacket(event.getPlayer(), payload);
         } catch (IOException ignored) {} catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -373,3 +373,4 @@ public class EasyPlaceProtocol extends JavaPlugin implements Listener {
         connection.sendPacket(packet);
     }
 }
+
